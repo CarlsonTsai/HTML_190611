@@ -6,7 +6,7 @@
     <style type="text/css">
         #content1 {
             width: 477px;
-
+            position: relative;
             /*4. 這裡要先變成?底下的元素才能依附上來*/
         }
 
@@ -17,16 +17,22 @@
         /*換成#img:hover + .desc是不是一樣的效果?*/
         #content1:hover .desc {
             /*3. 試試看用display或者用visibility*/
+            visibility: visible;
         }
 
         .desc {
             background-color: white;
             opacity: 0.4;
-
+            position: absolute;
+            bottom: 0;
             /*2. 試試看用display或者用visibility*/
-
+            width: 100%;
+            height: 30%;
+            visibility: hidden;
             /*1. 要怎麼樣跳脫現有的元素流找到定位?*/
         }
+
+        
 
     </style>
 </head>
@@ -34,7 +40,7 @@
 <body>
 
     <div id="content1" style="margin:100px;">
-        <img src="img/sunny.jpg">
+        <img src="img/sunny.JPG">
         <p class="desc">千陽號海上行</p>
     </div>
 

@@ -9,9 +9,29 @@
         }
 
         #reddiv {
-            background-color: #FF0000;
+
             width: 200px;
             height: 200px;
+            /* 固定 */
+            position: fixed;
+
+            /* 設定位置 */
+            right: 0;
+            bottom: 0;
+
+            /* 設圖片 */
+            background-image: url("img/onepiece20th_logo.png");
+
+            /* 圖片大小改成容器大小 */
+            background-size: contain;
+
+            /* 讓圖片不重複 */
+            background-repeat: no-repeat;
+
+            /* 圖片至中 */
+            background-position: center
+            
+
 
             /* 試試看在這裡，加入哪三個屬性設定，可以模仿網頁上，將圖片固定在右下角? */
 
@@ -43,7 +63,7 @@
     <div class="demo">
         我是demo div的元素內容。<br>
         試著在 紅色div 修改position的屬性後，加上 top、bottom、left、right 看看有什麼變化吧!!
-        <div id="reddiv">Red</div>
+        <div id="reddiv"></div>
         <div id="greendiv">Green</div>
         <div id="bluediv">Blue</div>
     </div>

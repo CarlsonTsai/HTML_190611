@@ -26,8 +26,73 @@
 </head>
 
 <body>
-   
-    
+    <h1>教室通訊錄</h1>
+    <form action="">
+        <div>
+            <label for="input_name">姓名</label>
+            <input type="text" id="input_name">
+        </div>
+        <div>
+            <label for="input_phone">電話</label>
+            <input type="text" id="input_phone">
+        </div>
+        <label for="">性別</label>
+        <input type="radio" id="male" name="gender">
+        <label for="male">男生</label>
+        <input type="radio" id="female" name="gender">
+        <label for="female">女生</label>
+        <br>
+        出生日期: <input type="date">
+        <br>
+        出生時間: <input type="time">
+        <br>
+        <div>
+            <label>使用過那些軟體(多選):</label>
+            <input type="checkbox" name="a" id="word" value="word">
+            <label for="word">word</label>
+            <input type="checkbox" name="a" id="Excel" value="Excel">
+            <label for="Excel">Excel</label>
+            <input type="checkbox" name="a" id="PowerPoint" value="PowerPoint">
+            <label for="PowerPoint">PowerPoint</label>
+            <input type="checkbox" name="a" id="Visual Basic Code" value="Visual Basic Code">
+            <label for="Visual Basic Code">Visual Basic Code</label>
+            <input type="checkbox" name="a" id="PHP" value="PHP">
+            <label for="PHP">PHP</label>
+            <input type="checkbox" name="a" id="MySQL" value="MySQL">
+            <label for="MySQL">MySQL</label>
+
+        </div>
+
+        <br>
+        Email: <input type="email">
+        <br>
+        最喜歡的顏色：<input type="color">
+        <br>
+        <div>
+            <label for="height">身高（tag）:</label>
+            <input type="range" id="height" min="140" max="200" step="1" oninput="outputUpdate(value)">
+            <output id="result">顯示數字</output>
+        </div>
+        <br>
+        <label for="city">居住地：</label>
+        <select name="cityList" id="city">
+            <optgroup label="Taipei">Taipei</optgroup>
+            <option value="zhongshan">中山</option>
+            <option value="tamsui">淡水</option>
+            <option value="nangan">南港</option>
+            <optgroup label="Taichung">Taichung</optgroup>
+            <option value="central">中區</option>
+            <option value="nantun">南屯區</option>
+        </select>
+        <br>
+        <input type="button" value="送出通訊錄">
+    </form>
+
+    <script>
+            function outputUpdate(vol){
+                document.getElementById("result").value = vol ;
+            }
+    </script>
 </body>
 
 </html>
@@ -42,5 +107,3 @@
 <!--1.9. 試試看，加入送出按鈕 (submit) -->
 <!--1.10. 試試看，加入居住地 <select> <option> -->
 <!--1.11. 試試看，按下按鈕網址列會有什麼改變? -->
-
-

@@ -7,6 +7,39 @@
     <!-- 底下練習table的框線設定，還有以及css的虛擬元素選擇器-->
 
     <style>
+        table{
+            border: 2px solid red;
+            border-spacing: 1em;
+        }
+        td{
+            border:dotted orange;
+            border-width: 0px 2px;
+        }
+        tr{
+            border: 2px dashed ;
+            display: block;
+        }
+        tr:last-child{
+            border: 0;
+        }
+        td:last-child { 
+            border-right: 0;
+        }
+        td:first-child, 
+        td+td {
+            border-left: 0; 
+        }
+        /* 設定不是第一列 */
+        tr:not(:first-child){
+            background-color: aqua;
+        }
+
+        /*設定第四列*/
+        tr:nth-child(4){
+            background-color: blueviolet;
+        }
+
+
         /* 1. 設定 table 的 border，2px solid red */
         /* 2. 設定 td 的 border，2px dotted orange */
         /* 3. 到w3c網頁，查詢border-collapse & border-spacing 這個屬性的用法，並且設定在table裡面試試看 */
